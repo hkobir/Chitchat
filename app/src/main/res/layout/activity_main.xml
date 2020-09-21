@@ -75,7 +75,9 @@
             android:layout_alignParentBottom="true"
             android:backgroundTint="@color/colorPrimary"
             android:clickable="true"
-            android:paddingRight="16dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="8dp"
+            app:fabSize="mini"
             android:src="@drawable/ic_hand"
             android:tint="@android:color/white" />
 
@@ -83,21 +85,32 @@
             android:id="@+id/list_of_message"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/fab"
+            android:layout_above="@+id/divider"
             android:layout_below="@+id/toolBar"
-            android:layout_marginBottom="20dp"
             android:paddingHorizontal="16dp"
             android:paddingTop="8dp"></androidx.recyclerview.widget.RecyclerView>
 
+        <View
+            android:id="@+id/divider"
+            android:layout_marginBottom="8dp"
+            android:layout_above="@+id/user_message"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#CCC6C6"/>
         <EditText
             android:id="@+id/user_message"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/input_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/fab"
-            android:hint="Enter your message"
-            android:paddingLeft="16dp" />
+            android:hint="Aa"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"/>
 
 
     </RelativeLayout>

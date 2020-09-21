@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     private void setMessage() {
         progressDialog.show();
         DatabaseReference msgReffeReference = FirebaseDatabase.getInstance().getReference().child("message");
-        msgReffeReference.orderByChild("messageTime").addValueEventListener(new ValueEventListener() {
+        msgReffeReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list_chat_models.clear();
